@@ -1,13 +1,18 @@
 const fs = require('fs');
 const http = require('http');
 const url = require('url');
+
+// get port number or set to default
 const port = process.env.PORT || 3000
 
+// hardcoded data
 const json = fs.readFileSync(`${__dirname}/data/data.json`, 'utf-8');
 const laptopData = JSON.parse(json);
 
+// create server
 const server = http.createServer((req, res) => {
-  
+  res.statusCode = 200;
+
   let urlParse = url.parse(req.url, true);
   const pathName = urlParse.pathname;
   const query = urlParse.query;
@@ -51,8 +56,9 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(port, '127.0.0.1', () => {
-  console.log('listening for requests now')
+// set server port
+server.listen(port, () => {
+  console.log(`Server running at port ${port}`);
 })
 
 function replaceTemplate (originalHtml, laptop){
