@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-laptop-store",
+  "version": "1.0.0",
+  "description": "Simple laptop store built using nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nealdeters/nodejs-crash-course.git"
+  },
+  "author": "Neal Deters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nealdeters/nodejs-crash-course/issues"
+  },
+  "homepage": "https://github.com/nealdeters/nodejs-crash-course#readme"
+}
